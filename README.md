@@ -9,11 +9,6 @@ sudo chmod +x ./wisebits-docker/bin/init.sh
 ./wisebits-docker/bin/init.sh
 ```
 
-Check if everything is OK.
-```angular2html
-cd ./wisebits-docker && docker-compose ps
-```
-
 Running Tests
 ```angular2html
 cd ./wisebits-docker && docker-compose exec php-fpm /bin/sh
