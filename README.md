@@ -2,7 +2,7 @@
 
 1. Installation
 
-Run commands
+Installation commands
 ```
 git clone git@github.com:bubble-double/wisebits-docker.git
 sudo chmod +x ./wisebits-docker/bin/init.sh
