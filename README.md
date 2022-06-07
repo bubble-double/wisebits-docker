@@ -2,10 +2,13 @@
 
 1. Installation
 
-Run command
+Run commands
 ```
-git clone git@github.com:bubble-double/wisebits-docker.git && ./wisebits-docker/bin/init.sh
+git clone git@github.com:bubble-double/wisebits-docker.git
+sudo chmod +x ./wisebits-docker/bin/init.sh
+./wisebits-docker/bin/init.sh
 ```
+
 The command ```init.sh```: 
   - will create configuration files, 
   - will clone the repository 
@@ -14,5 +17,8 @@ The command ```init.sh```:
   - will pull docker images, 
   - will run docker containers, 
   - will install composer dependencies.
+
+NOTE:
+Running the command ```init.sh``` is safe!
 
 See https://github.com/bubble-double/wisebits
