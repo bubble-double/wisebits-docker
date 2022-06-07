@@ -9,6 +9,11 @@ sudo chmod +x ./wisebits-docker/bin/init.sh
 ./wisebits-docker/bin/init.sh
 ```
 
+Next, check if everything is OK.
+```angular2html
+cd ./wisebits-docker && docker-compose ps
+```
+
 The command ```init.sh```: 
   - will create configuration files, 
   - will clone the repository 
