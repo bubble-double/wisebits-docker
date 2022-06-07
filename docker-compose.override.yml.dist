@@ -1,0 +1,9 @@
+version: '3'
+services:
+    nginx:
+        ports:
+            - 80:80
+
+    redis:
+        port:
+            - 6379:6379

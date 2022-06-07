@@ -1,0 +1,15 @@
+[Xdebug]
+;xdebug.start_with_request=yes
+;xdebug.idekey = PHPSTORM
+;xdebug.mode = debug
+;xdebug.discover_client_host=0
+;xdebug.client_port=9008
+;xdebug.extended_info=1
+;xdebug.remote_handler=dbgp
+
+; if you want to get your ip, execute this command into php-fpm container:
+;       IP=$(/sbin/ip route | awk '/default/ { print $3 }')
+;       echo $IP
+; if you want to see docker network configs, execute this command: docker inspect docker-wisebits
+; maybe you need allow rule to ufw: sudo ufw allow from 192.168.222.1/28 to any port 9008
+;xdebug.client_host=192.168.223.0/28

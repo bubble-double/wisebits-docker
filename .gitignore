@@ -1,0 +1,9 @@
+.idea/*
+.env
+docker-compose.override.yml
+source/*
+!source/.gitkeep
+logs/*
+!logs/.gitkeep
+images/php-fpm/conf/php.ini
+images/php-fpm/xdebug/xdebug.ini

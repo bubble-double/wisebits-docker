@@ -1,0 +1,29 @@
+version: '3'
+services:
+    nginx:
+        container_name: ${PROJECT_NAME}_nginx
+        image: nginx:latest
+        volumes:
+            - ./hosts:/etc/nginx/conf.d
+            - ./source/wisebits:/var/www/wisebits
+            - ./logs:/var/log/nginx
+        links:
+            - php-fpm
+        dns:
+            - 8.8.8.8
+            - 4.4.4.4
+
+    php-fpm:
+        container_name: ${PROJECT_NAME}_php
+        build: images/php-fpm
+        volumes:
+            - ./source/wisebits:/var/www/wisebits
+            - ./images/php-fpm/conf/php.ini:/usr/local/etc/php/conf.d/40-custom.ini
+            - ./images/php-fpm/xdebug/xdebug.ini:/usr/local/etc/php/conf.d/99-xdebug.ini
+        dns:
+            - 8.8.8.8
+            - 4.4.4.4
+
+    redis:
+        container_name: ${PROJECT_NAME}_redis
+        image: redis:alpine
