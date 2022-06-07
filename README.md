@@ -18,6 +18,7 @@ Running Tests
 ```angular2html
 cd ./wisebits-docker && docker-compose exec php-fpm /bin/sh
 cd wisebits && php artisan test
+exit
 ```
 
 The command ```init.sh```: 
